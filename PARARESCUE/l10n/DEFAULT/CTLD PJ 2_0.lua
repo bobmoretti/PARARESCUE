@@ -4059,6 +4059,14 @@ function ctld.spawnDroppedGroup(_point, _details, _spawnBehind, _maxSearch)
     _group.country = _details.country;
 
     local _spawnedGroup = Group.getByName(mist.dynAdd(_group).name)
+    local _eplrsEnable = {
+        id = 'EPLRS',
+        params = {
+            value = true,
+            groupId = 1,
+        }
+    }
+    _spawnedGroup:getController():setCommand(_eplrsEnable)
 
     --local _spawnedGroup = coalition.addGroup(_details.country, Group.Category.GROUND, _group)
 
