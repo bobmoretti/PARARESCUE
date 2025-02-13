@@ -300,7 +300,7 @@ local loadGroup = function(playerUnitName)
     if dist > MAX_PICKUP_DSTANCE then
         local s = "Sorry, cannot find any groups to pick up. Make sure you are " ..
                       "within %.0f meters of the group you are trying to pick up. " ..
-                      "Nearest group is %s, and you need to get %.0f meters closer."
+                      "Nearest group is %s; you need to get %.0f meters closer."
         local msg = _sf(s, MAX_PICKUP_DSTANCE, nearestGroup:getName(), dist - MAX_PICKUP_DSTANCE)
         sendMsgToUnit(playerUnit, msg)
         return
